@@ -205,7 +205,6 @@ var dss = (function () {
       if (_dss.size(temp) && !temp.memberOf && temp.type !== 'group') {
         blocks.push(temp)
       } else if (temp.type === 'group') {
-        console.log('found group')
         groups[temp.name] = groups[temp.name] ? Object.assign(groups[temp.name], temp) : temp
       } else if (temp.type === 'element' && temp.memberOf) {
         if (!groups[temp.memberOf]) {
